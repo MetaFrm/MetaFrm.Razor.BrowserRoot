@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.32804.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetaFrm.Razor.BrowserRoot(net6.0)", "MetaFrm.Razor.BrowserRoot(net6.0)\MetaFrm.Razor.BrowserRoot(net6.0).csproj", "{31BF0664-E58F-45FD-86EF-7385FCC93B99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4CE6C9EB-3284-46D7-B25E-FA271CD72496}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{E09D2EBD-717B-4602-8C47-88A3BF400408}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{B8A7070A-DEB9-450F-9544-DA5E011E4548}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\build.yml = .github\workflows\build.yml
+		.github\workflows\nuget.yml = .github\workflows\nuget.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{C1197D19-16A3-449D-A5BE-0D38EA9EDBB7}"
+	ProjectSection(SolutionItems) = preProject
+		src\Shared\Error.razor.cs = src\Shared\Error.razor.cs
+		src\Shared\MainLayout.razor.cs = src\Shared\MainLayout.razor.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ViewModels", "ViewModels", "{1B3D4E6B-B179-4651-AAEC-E8BA1D3F0872}"
+	ProjectSection(SolutionItems) = preProject
+		src\ViewModels\ErrorViewModel.cs = src\ViewModels\ErrorViewModel.cs
+		src\ViewModels\MainLayoutViewModel.cs = src\ViewModels\MainLayoutViewModel.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31BF0664-E58F-45FD-86EF-7385FCC93B99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31BF0664-E58F-45FD-86EF-7385FCC93B99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31BF0664-E58F-45FD-86EF-7385FCC93B99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31BF0664-E58F-45FD-86EF-7385FCC93B99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B8A7070A-DEB9-450F-9544-DA5E011E4548} = {E09D2EBD-717B-4602-8C47-88A3BF400408}
+		{C1197D19-16A3-449D-A5BE-0D38EA9EDBB7} = {4CE6C9EB-3284-46D7-B25E-FA271CD72496}
+		{1B3D4E6B-B179-4651-AAEC-E8BA1D3F0872} = {4CE6C9EB-3284-46D7-B25E-FA271CD72496}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A66E61C-0320-4207-BAFE-E3DD82C82898}
+	EndGlobalSection
+EndGlobal

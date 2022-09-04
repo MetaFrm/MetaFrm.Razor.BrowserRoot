@@ -1,0 +1,97 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>MetaFrm.Razor.BrowserRoot</AssemblyName>
+    <RootNamespace>MetaFrm.Razor.Browser</RootNamespace>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>MetaFrm.Razor.BrowserRoot.net6.0</PackageId>
+    <Title>Meta Framework Razor BrowserRoot</Title>
+    <Product>Meta Framework Razor BrowserRoot</Product>
+    <Version>6.0.0.0</Version>
+    <Authors>dsun</Authors>
+    <Company>Meta Framework</Company>
+    <Description>Meta Framework
+(Multi platform &amp; Meta management)</Description>
+    <Copyright>Copyright 2022. dsun all rights reserved.</Copyright>
+    <PackageProjectUrl>https://github.com/MetaFrm/MetaFrm.Razor.BrowserRoot</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MetaFrm/MetaFrm.Razor.BrowserRoot</RepositoryUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageTags>meta;framework;dotnet;maui;</PackageTags>
+	
+	<SourceRevisionId>build$([System.DateTime]::UtcNow.ToString("yyyy-MM-ddTHH:mm:ss:fffZ"))</SourceRevisionId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ExampleJsInterop.cs" />
+    <Compile Remove="MainLayoutViewModel.cs" />
+    <Compile Remove="Pages\Error.cshtml.cs" />
+    <Compile Remove="Pages\Home.razor.cs" />
+    <Compile Remove="Shared\Login.razor.cs" />
+    <Compile Remove="Shared\Logout.razor.cs" />
+    <Compile Remove="ViewModels\DefaultBrowserViewModel.cs" />
+    <Compile Remove="ViewModels\LoginViewModel.cs" />
+    <Compile Remove="ViewModels\LogoutViewModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Modal.razor" />
+    <Content Remove="Pages\Error.cshtml" />
+    <Content Remove="Pages\Home.razor" />
+    <Content Remove="Pages\_Host.cshtml" />
+    <Content Remove="Pages\_Layout.cshtml" />
+    <Content Remove="Shared\Login.razor" />
+    <Content Remove="Shared\Logout.razor" />
+    <Content Remove="Shared\NavMenu.razor" />
+    <Content Remove="Shared\NavMenu1.razor" />
+    <Content Remove="Shared\Toast.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="DefaultBrowser.razor.css" />
+    <None Remove="Shared\MainLayout.razor.css" />
+    <None Remove="Shared\NavMenu1.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\src\Shared\Error.razor.cs" Link="Shared\Error.razor.cs" />
+    <Compile Include="..\src\Shared\MainLayout.razor.cs" Link="Shared\MainLayout.razor.cs" />
+    <Compile Include="..\src\ViewModels\ErrorViewModel.cs" Link="ViewModels\ErrorViewModel.cs" />
+    <Compile Include="..\src\ViewModels\MainLayoutViewModel.cs" Link="ViewModels\MainLayoutViewModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MetaFrm.Core.net6.0" Version="6.0.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="6.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="C:\Users\dsun\.nuget\packages\bootstrap\5.1.3\contentFiles\any\any\wwwroot\js\bootstrap.js">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Update="_Imports.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
